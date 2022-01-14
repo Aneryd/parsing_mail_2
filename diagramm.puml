@@ -1,7 +1,0 @@
-@startuml
-'https://plantuml.com/sequence-diagram
-
-Main --* MeanXDSPAM
-Main --* BarGraph
-Main --* Spammer
-@enduml
