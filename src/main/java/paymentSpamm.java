@@ -88,19 +88,9 @@ public class paymentSpamm {
                 }
             }
         }
+
         String[] answer = new String[10000];
-        Integer number_answer = 0;
-        for(int i=0; i<cnf_arr.length; i++){
-            if((cnf_arr[i] != null) && (prb_arr[i] != null) && (res_arr[i].equals("Innocent")))
-            {
-                if(cnf_arr[i] < 0.6 && mail_arr[i] != null){
-//                    System.out.println(cnf_arr[i]);
-//                    System.out.println(mail_arr[i]);
-                    answer[number_answer] = mail_arr[i];
-                    number_answer += 1;
-                }
-            }
-        }
+        answer = comparisonSpamm.coparison(cnf_arr, prb_arr, res_arr, mail_arr);
         in.close();
 
         return answer;

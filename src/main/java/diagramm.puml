@@ -2,14 +2,25 @@
 'https://plantuml.com/sequence-diagram
 
 Main ..> MeanXDSPAM
+Main : main()
 MeanXDSPAM ..> paymentXDSPAM
+MeanXDSPAM : main()
 paymentXDSPAM -->connectURL
+paymentXDSPAM : payment()
 Main ..> BarGraph
+BarGraph : main()
 BarGraph ..> constructionGraph
+constructionGraph : comstuction()
 BarGraph ..> paymentGraph
+paymentGraph : paymnet()
 paymentGraph -->connectURL
 Main ..> Spammer
+Spammer : main()
 Spammer -->connectURL
+connectURL : connect()
 Spammer ..> paymentSpamm
+paymentSpamm : payment()
+Spammer ..> comparisonSpamm
+comparisonSpamm : coparison()
 
 @enduml
